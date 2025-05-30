@@ -1,4 +1,4 @@
-const Hero = () => {
+const MovieHero = () => {
   return (
     <div
       className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] bg-cover bg-center my-4 md:my-7"
@@ -32,4 +32,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default MovieHero;

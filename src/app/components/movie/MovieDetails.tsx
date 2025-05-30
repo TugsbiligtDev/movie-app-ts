@@ -1,8 +1,9 @@
-import React from "react";
-import Bagdge from "./Badge";
+import Badge from "../common/Badge";
+import MovieStaffInfo from "./MovieStaffInfo";
+import MovieCard from "./MovieCard";
 const MovieDetails = () => {
   return (
-    <div className="w-[1440px]">
+    <div className="w-[1440px] flex flex-col gap-8">
       <div className="flex justify-between text-[#09090B]">
         <div>
           <h1 className="text-4xl font-bold leading-10">Wicked</h1>
@@ -11,7 +12,7 @@ const MovieDetails = () => {
         <div>
           <p className="text-xs font-medium">Rating</p>
           <div className="flex">
-            <img src="/star.svg" alt="" />
+            <img src="/star.svg" alt="star" />
             <div>
               <p className="text-lg font-semibold">
                 6.9{" "}
@@ -30,11 +31,11 @@ const MovieDetails = () => {
       </div>
       <div className="flex flex-col gap-5">
         <div className="flex gap-3">
-          <Bagdge genre="genre" />
-          <Bagdge genre="genre" />
-          <Bagdge genre="genre" />
-          <Bagdge genre="genre" />
-          <Bagdge genre="genre" />
+          <Badge genre="genre" />
+          <Badge genre="genre" />
+          <Badge genre="genre" />
+          <Badge genre="genre" />
+          <Badge genre="genre" />
         </div>
         <div className="text-base font-normal text-[#09090B]">
           Elphaba, a misunderstood young woman because of her green skin, and
@@ -42,6 +43,18 @@ const MovieDetails = () => {
           of Oz. After an encounter with the Wonderful Wizard of Oz, their
           friendship reaches a crossroads.
         </div>
+        <div className="flex flex-col gap-5">
+          <MovieStaffInfo />
+          <MovieStaffInfo />
+          <MovieStaffInfo />
+        </div>
+      </div>
+      <div className="flex gap-8">
+        <MovieCard image="./first.jpg" rating={2} title="movie" />
+        <MovieCard image="./first.jpg" rating={2} title="movie" />
+        <MovieCard image="./first.jpg" rating={2} title="movie" />
+        <MovieCard image="./first.jpg" rating={2} title="movie" />
+        <MovieCard image="./first.jpg" rating={2} title="movie" />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-const Separation = ({ text }: { text: string }) => {
+const MovieSeparation = ({ text }: { text: string }) => {
   return (
     <div className="w-full mb-2">
       <div className="flex justify-between text-[#09090B] pb-2">
@@ -12,4 +12,4 @@ const Separation = ({ text }: { text: string }) => {
   );
 };
 
-export default Separation;
+export default MovieSeparation;

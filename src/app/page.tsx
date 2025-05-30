@@ -1,37 +1,32 @@
-import Hero from "./components/Hero";
-import Popular from "./components/Popular";
-import Top from "./components/Top";
-import Upcoming from "./components/Upcoming";
-import Navigation from "./components/Navigation";
-import Separation from "./components/Separation";
-import Footer from "./components/Footer";
-import Dropdown from "./components/Dropdown";
-import List from "./components/List";
-import ListContainer from "./components/ListContainer";
-import ListLoading from "./components/ListLoading";
-import ListNoResult from "./components/ListNoResult";
-import MovieDetails from "./components/MovieDetails";
+import MovieHero from "./components/movie/MovieHero";
+import MoviePopular from "./components/movie/MoviePopular";
+import MovieSeparation from "./components/movie/MovieSeparation";
+import MovieTop from "./components/movie/MovieTop";
+import MovieUpcoming from "./components/movie/MovieUpcomming";
+import MovieDetails from "./components/movie/MovieDetails";
+import HeroSkeleton from "./components/skeleton/HeroSkeleton";
+import GridSkeleton from "./components/skeleton/GridSkeleton";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
       {/* <Dropdown /> */}
       {/* <ListContainer /> */}
       {/* <ListLoading /> */}
       {/* <ListNoResult /> */}
-      <MovieDetails />
       <main className="pb-12">
-        <Hero />
+        {/* <MovieHero /> */}
+        <HeroSkeleton />
         <div className="container mx-auto px-4 py-8">
-          <Separation text="Upcoming" />
-          <Upcoming />
-          <Separation text="Popular" />
-          <Popular />
-          <Separation text="Top Rated" />
-          <Top />
+          {/* <MovieUpcoming text="Upcoming" />
+          <MoviePopular text="Popular" />
+          <MovieTop text="Top Rated" /> */}
+          <GridSkeleton />
+          <GridSkeleton />
+          <GridSkeleton />
+          {/* <MovieDetails /> */}
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
